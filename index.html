@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container" id="cv-form">
+        <h1 class="text-center my-2"><i class="fa-solid fa-file-lines"></i>
+            Resume Generator</h1>
+        <div class=" mt-2">
+            <h3>Perseonal Infromation</h3>
+            <div class="form-group col-md-6 ">
+                <label for="nameField">Name</label>
+                <input type="text" id="nameField" class="form-control" placeholder="Your Name">
+            </div>
+            <div class="form-group col-md-6 ">
+                <label for="emailField">Email</label>
+                <input type="text" id="emailField" class="form-control" placeholder="Your Email">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="contactField">Contact</label>
+                <input type="text" id="contactField" class="form-control" placeholder="Your Contact">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="addressField">Address</label>
+                <input type="text" id="addressField" class="form-control" placeholder="Your Address">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="nameField">
+                    <h5>Important Links</h5>
+                </label>
+                <input type="text" id="fbField" class="form-control mt-1" placeholder="Facebook">
+                <input type="text" id="linkedinField" class="form-control mt-1" placeholder="Linkedin">
+                <input type="text" id="instaField" class="form-control mt-1" placeholder="Any other">
+            </div>
+        </div>
+
+        <div class="col-md-6 mt-2">
+            <h3>Professional Information</h3>
+            <div class="input-group mt-2">
+                <span class="input-group-text">
+                    <h5>Academic History</h5>
+                </span>
+                <input type="text" id="highSchoolField" class="form-control" placeholder="High School">
+                <input type="text" id="intermediateField" class="form-control" placeholder="Intermediate">
+                <input type="text" id="graduationField" class="form-control" placeholder="Graduaction">
+            </div>
+            <div class="input-group mt-2">
+                <span class="input-group-text">
+                    <h5>Languages</h5>
+                </span>
+                <input type="text" id="languageField1" class="form-control" placeholder="Enter Language">
+                <input type="text" id="languageField2" class="form-control" placeholder="Enter Language">
+            </div>
+            <div class="input-group mt-2">
+                <span class="input-group-text">
+                    <h5>Skills</h5>
+                </span>
+                <input type="text" id="skill1" class="form-control" placeholder="Skill-1">
+                <input type="text" id="skill2" class="form-control" placeholder="Skill-2">
+                <input type="text" id="skill3" class="form-control" placeholder="Skill-3">
+                <input type="text" id="skill4" class="form-control" placeholder="Skill-4">
+                <input type="text" id="skill5" class="form-control" placeholder="Skill-5">
+            </div>
+            <div class="input-group mt-2">
+                <span class="input-group-text">
+                    <h5>Work Experience</h5>
+                </span>
+                <input type="text" id="wExp1" class="form-control" placeholder="Skill-1">
+                <input type="text" id="wExp2" class="form-control" placeholder="Skill-2">
+            </div>
+            <div class="form-group mb-3 mt-2">
+                <label for="exampleFormControlTextarea1" class="form-label">Summary</label>
+                <textarea class="form-control" id="summaryTextArea" rows="3" placeholder="Enter here"></textarea>
+                <div class=" container text-center mt-2">
+                    <button onclick="generateCV()" class="btn btn-primary btn=lg">Generate CV</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- cv template -->
+
+    <div class="container" id="cv-template">
+        <div class="row">
+            <div class="col-md-4 text-center background">
+                <!-- first col -->
+                <img src="https://wallpapers-clan.com/wp-content/uploads/2022/08/default-pfp-18.jpg" alt=""
+                    class="img-fluid myImg">
+                <div class="container">
+                    <h4 id="nameTemp">Akash Srivastava</h4>
+                    <p id="emailTemp">ABC@gmail.com</p>
+                    <p id="contactTemp">5836689636</p>
+                    <p id="addressTemp">78/68 mahabiran lane mutthiganj</p>
+
+                    <hr />
+
+                    <p><a id="fbTemp" href="#1">facebook</a></p>
+                    <p><a id="linkedinTemp" href="#1">linkedin</a></p>
+                    <p><a id="instaTemp" href="#1">Instagram</a></p>
+
+                    <hr />
+                    <h5>Academic History</h5>
+                    <p id="highSchoolTemp">High School</p>
+                    <p id="intermediateTemp">intermediate</p>
+                    <p id="graduationTemp">Graduation</p>
+
+                    <hr />
+
+                    <h5>Languages</h5>
+                    <p id="languageTemp1">Language 1</p>
+                    <p id="languageTemp2">Language 2</p>
+
+                </div>
+            </div>
+            <div class="col-md-8 py-5">
+                <!-- second col -->
+                <div class="card">
+                    <div class="card-header background">
+                        <h3>Skills</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="skillTemp1">Skill</p>
+                        <p id="skillTemp2">Skill</p>
+                        <p id="skillTemp3">Skill</p>
+                        <p id="skillTemp4">Skill</p>
+                        <p id="skillTemp5">Skill</p>
+                    </div>
+                </div>
+                <!-- objective card -->
+
+                <div class="card">
+                    <div class="card-header background">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="wExpTemp1">Exp</p>
+                        <p id="wExpTemp2">Exp</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header background">
+                        <h3>Summary</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="summaryTemp">Lorem ipsum, dolor sit amet
+                            consectetur adipisicing elit. Aliquam ad deleniti harum eveniet facilis
+                            commodi ullam atque repudiandae corrupti culpa!</p>
+                    </div>
+                </div>
+                <div class="container mt-3 text-center">
+                    <button onclick="printCV()" class="btn background">
+                        Print Cv
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="App.js"></script>
+</body>
+</html>
